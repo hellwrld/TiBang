@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_actionbar"
+        layout="@layout/include_action_bar" />
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/edit_title"
+                android:paddingLeft="10dp"
+                android:hint="标题"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_edit_height"
+                android:layout_margin="10dp"
+                />
+
+            <EditText
+                android:id="@+id/edit_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_edit_height"
+                android:paddingLeft="10dp"
+                android:layout_margin="10dp"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:hint="手机"
+                />
+
+            <EditText
+                android:id="@+id/edit_describe"
+                android:hint="描述"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:minLines="4"
+                />
+
+            <Button
+                android:id="@+id/btn_add_picture"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_action_bar_height"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login_selector"
+                android:text="选图片"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_size_large" />
+
+            <Button
+                android:id="@+id/btn_submit_question"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/base_action_bar_height"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login_selector"
+                android:text="发榜"
+                android:textColor="@color/base_color_text_white"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
