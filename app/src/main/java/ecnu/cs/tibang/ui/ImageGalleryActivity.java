@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ecnu.cs.tibang.R;
-import ecnu.cs.tibang.util.PhotoViewAdapter;
+import ecnu.cs.tibang.adapter.PhotoViewAdapter;
 
 public class ImageGalleryActivity extends Activity {
 

@@ -1,4 +1,4 @@
-package ecnu.cs.tibang.util;
+package ecnu.cs.tibang.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,11 +15,6 @@ import android.widget.ImageView;
 import android.widget.OverScroller;
 import android.widget.Scroller;
 
-/**
- * Created by liuheng on 2015/6/21.
- * <p/>
- * 如有任何意见和建议可邮件  bmme@vip.qq.com
- */
 public class PhotoView extends ImageView {
 
     private final static int ANIMA_DURING = 300;

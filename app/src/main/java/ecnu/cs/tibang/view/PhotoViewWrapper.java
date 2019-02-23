@@ -1,17 +1,12 @@
-package ecnu.cs.tibang.util;
+package ecnu.cs.tibang.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.bumptech.glide.Glide;
-import ecnu.cs.tibang.R;
 
 public class PhotoViewWrapper extends RelativeLayout {
-
-	protected View loadingDialog;
 
 	protected PhotoView photoView;
 
@@ -29,10 +24,6 @@ public class PhotoViewWrapper extends RelativeLayout {
 		init();
 	}
 
-	public PhotoView getImageView() {
-		return photoView;
-	}
-
 	protected void init() {
 		photoView = new PhotoView(mContext);
 		photoView.enable();
@@ -40,14 +31,9 @@ public class PhotoViewWrapper extends RelativeLayout {
 		photoView.setLayoutParams(params);
 		this.addView(photoView);
 		photoView.setVisibility(GONE);
-
-		loadingDialog = LayoutInflater.from(mContext).inflate(R.layout.photo_view_zoom_progress, null);
-		loadingDialog.setLayoutParams(params);
-		this.addView(loadingDialog);
 	}
 
 	public void setUrl(String imageUrl) {
-		loadingDialog.setVisibility(View.GONE);
 		photoView.setVisibility(VISIBLE);
 		Glide.with(mContext).load(imageUrl).thumbnail(0.1f).into(photoView);
 	}

@@ -1,4 +1,4 @@
-package ecnu.cs.tibang.util;
+package ecnu.cs.tibang.adapter;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import ecnu.cs.tibang.view.PhotoViewWrapper;
 
 public class PhotoViewAdapter extends PagerAdapter {
 
